@@ -1,6 +1,6 @@
-import profileImg from "@/assets/profile.jpg";
 import { GraduationCap, BarChart3, Briefcase } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+import { useProfilePic } from "@/hooks/useProfilePic";
 
 const highlights = [
   { icon: GraduationCap, label: "BS Computer Science" },
@@ -8,7 +8,9 @@ const highlights = [
   { icon: Briefcase, label: "Freelancing Enthusiast" },
 ];
 
-const AboutSection = () => (
+const AboutSection = () => {
+  const profileImg = useProfilePic();
+  return (
   <section id="about" className="section-padding bg-card">
     <div className="container mx-auto">
       <AnimatedSection>
@@ -19,7 +21,7 @@ const AboutSection = () => (
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <AnimatedSection className="flex justify-center" delay={0.1}>
           <div className="w-72 h-72 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-card-hover group">
-            <img src={profileImg} alt="About me" loading="lazy" width={512} height={512} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            <img src={profileImg} alt="About me" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
           </div>
         </AnimatedSection>
 
@@ -41,6 +43,7 @@ const AboutSection = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default AboutSection;

@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from "react";
-import profileImg from "@/assets/profile.jpg";
 import { Download, Eye } from "lucide-react";
+import { useProfilePic } from "@/hooks/useProfilePic";
 
 const useTypingEffect = (texts: string[], typingSpeed = 100, deletingSpeed = 50, pauseTime = 2000) => {
   const [displayText, setDisplayText] = useState("");
@@ -36,6 +36,7 @@ const HeroSection = () => {
   const [offset, setOffset] = useState(0);
   const titles = useMemo(() => ["Data Analyst", "Problem Solver", "Insight Generator"], []);
   const typedText = useTypingEffect(titles);
+  const profileImg = useProfilePic();
 
   useEffect(() => {
     const handleScroll = () => setOffset(window.scrollY);
@@ -91,7 +92,7 @@ const HeroSection = () => {
         <div className="order-1 lg:order-2 flex justify-center animate-fade-in" style={{ animationDelay: "0.2s" }}>
           <div className="relative" style={{ transform: `translateY(${offset * -0.1}px)` }}>
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-card-hover animate-float group">
-              <img src={profileImg} alt="Profile" width={512} height={512} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              <img src={profileImg} alt="Profile" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
             </div>
             <div className="absolute -bottom-4 -right-4 w-20 h-20 rounded-full gradient-bg opacity-30 blur-xl" />
             <div className="absolute -top-4 -left-4 w-16 h-16 rounded-full bg-accent/30 blur-xl" />

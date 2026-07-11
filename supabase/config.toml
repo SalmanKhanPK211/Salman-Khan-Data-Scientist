@@ -1,1 +1,4 @@
 project_id = "uhntdilduahwxstecwav"
+
+[functions.admin-mutate]
+verify_jwt = false

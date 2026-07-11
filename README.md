@@ -1,64 +1,63 @@
-# Salman Khan — Data Analyst/Scientist Portfolio
+# Salman Khan — Data Analyst Portfolio
 
-A modern, responsive personal portfolio showcasing my data analytics projects, technical skills, certifications, and professional journey. The portfolio features a clean user interface, smooth navigation, responsive design, and interactive animations to provide an engaging user experience.
+A modern, responsive personal portfolio built to showcase data analytics projects, skills, certifications, and professional experience. The site features smooth scroll navigation, a typing hero animation, and a clean minimal design optimized for both desktop and mobile.
+
+**Live Demo:** [https://salmankhanportfolio.lovable.app](https://salmankhanportfolio.lovable.app)
 
 ---
 
 ## Table of Contents
 
-- Overview
-- Features
-- Tech Stack
-- Getting Started
-- Project Structure
-- Available Scripts
-- Deployment
-- Contact
-- License
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Scripts](#scripts)
+- [Deployment](#deployment)
+- [Contact](#contact)
 
 ---
 
 ## Overview
 
-This portfolio highlights my journey as a Computer Science student with a strong interest in Data Analytics and Data Science. It showcases my technical expertise, completed certifications, hands-on projects, and the tools I use for solving real-world data problems.
+This portfolio presents Salman Khan as an aspiring Data Analyst and Data Science Learner. It highlights expertise in Python, SQL, data cleaning, visualization, and business intelligence, along with completed certifications and hands-on projects.
 
-The primary objective of this website is to provide recruiters, collaborators, and potential clients with a centralized platform to learn about my skills, experience, and portfolio.
+The goal is to provide a fast, accessible, and visually polished landing page for recruiters, collaborators, and clients.
 
 ---
 
 ## Features
 
-- Responsive and mobile-first design
-- Animated hero section with typing effect
-- About section introducing my background and career goals
-- Services section highlighting the solutions I offer
-- Technical skills showcase
-- Featured projects section
-- Tools and technologies section
-- Certifications showcase
-- Contact form for inquiries
-- Social media integration
-- Downloadable CV
-- Smooth scrolling navigation
-- Clean and modern UI
-- Optimized performance and accessibility
-- Light and Dark mode support
+- **Responsive Hero Section** with animated typing effect and stable layout
+- **About Section** summarizing background, skills, and career focus
+- **Services Section** showcasing offered data services
+- **Skills Section** displaying technical competencies
+- **Projects Section** with highlighted data analytics projects
+- **Tools Section** listing analytics and visualization tools
+- **Certifications Section** featuring completed courses and certificates
+- **Contact Form** powered by [Formspree](https://formspree.io)
+- **Social Links** to GitHub, LinkedIn, Gmail, WhatsApp, and TikTok
+- **Smooth Scroll Navigation** across all sections
+- **Downloadable CV** button
+- **Light/Dark Mode** support ready
+- **Mobile-first responsive design**
 
 ---
 
 ## Tech Stack
 
 | Category | Technology |
-| ---------- | ---------- |
-| Framework | React 18 |
-| Language | TypeScript |
-| Build Tool | Vite |
-| Styling | Tailwind CSS |
-| UI Components | shadcn/ui |
-| Icons | Lucide React |
-| Forms | Formspree |
-| Backend | Supabase |
-| Testing | Vitest & Playwright |
+| --- | --- |
+| Framework | [React](https://react.dev) 18 |
+| Language | [TypeScript](https://www.typescriptlang.org) |
+| Build Tool | [Vite](https://vitejs.dev) |
+| Styling | [Tailwind CSS](https://tailwindcss.com) 3 |
+| UI Components | [shadcn/ui](https://ui.shadcn.com) |
+| Icons | [Lucide React](https://lucide.dev) |
+| Forms | [Formspree](https://formspree.io) |
+| Backend/Auth | Lovable Cloud (Supabase) |
+| Testing | [Vitest](https://vitest.dev) + [Playwright](https://playwright.dev) |
 
 ---
 
@@ -66,50 +65,35 @@ The primary objective of this website is to provide recruiters, collaborators, a
 
 ### Prerequisites
 
-Before running this project, ensure you have installed:
-
-- Node.js (v18 or later)
-- npm or Bun
+- [Node.js](https://nodejs.org) 18+
+- [Bun](https://bun.sh) or npm
 
 ### Installation
 
-Clone the repository:
+1. Clone the repository:
 
-```bash
-git clone https://github.com/SalmanKhanPK211/portfolio.git
-```
+   ```bash
+   git clone https://github.com/SalmanKhanPK211/portfolio.git
+   cd portfolio
+   ```
 
-Navigate to the project directory:
+2. Install dependencies:
 
-```bash
-cd portfolio
-```
+   ```bash
+   bun install
+   # or
+   npm install
+   ```
 
-Install dependencies:
+3. Start the development server:
 
-```bash
-npm install
+   ```bash
+   bun dev
+   # or
+   npm run dev
+   ```
 
-# or
-
-bun install
-```
-
-Run the development server:
-
-```bash
-npm run dev
-
-# or
-
-bun dev
-```
-
-Open your browser and visit:
-
-```
-http://localhost:8080
-```
+4. Open [http://localhost:8080](http://localhost:8080) in your browser.
 
 ---
 
@@ -117,74 +101,67 @@ http://localhost:8080
 
 ```text
 portfolio/
-├── public/
-│   ├── images
-│   ├── favicon
-│   └── CV
-│
+├── public/                 # Static assets (CV, images, favicon)
 ├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── hooks/
-│   ├── integrations/
-│   ├── lib/
-│   ├── pages/
-│   ├── styles/
-│   ├── App.tsx
-│   └── main.tsx
-│
-├── index.html
-├── package.json
-├── vite.config.ts
-├── tailwind.config.ts
-├── tsconfig.json
-└── README.md
+│   ├── assets/             # Images and certificates
+│   ├── components/         # React components for each section
+│   ├── hooks/              # Custom React hooks
+│   ├── integrations/       # Backend/client integrations
+│   ├── lib/                # Utility functions
+│   ├── pages/              # Page-level components
+│   ├── styles/             # Global styles
+│   ├── App.tsx             # Main app component
+│   └── main.tsx            # Application entry point
+├── index.html              # HTML template
+├── package.json            # Project dependencies and scripts
+├── tailwind.config.ts      # Tailwind CSS configuration
+├── tsconfig.json           # TypeScript configuration
+└── vite.config.ts          # Vite configuration
 ```
 
 ---
 
-## Available Scripts
+## Scripts
 
-| Command | Description |
-| -------- | ----------- |
-| `npm run dev` | Start the development server |
-| `npm run build` | Build the project for production |
-| `npm run preview` | Preview the production build |
-| `npm run lint` | Run ESLint |
-| `npm test` | Run unit tests |
-| `npm run test:watch` | Run tests in watch mode |
+| Script | Description |
+| --- | --- |
+| `dev` | Start the local development server |
+| `build` | Build the project for production |
+| `preview` | Preview the production build locally |
+| `lint` | Run ESLint across the codebase |
+| `test` | Run unit tests with Vitest |
+| `test:watch` | Run unit tests in watch mode |
 
 ---
 
 ## Deployment
 
-To generate a production-ready build, run:
+This project is configured for seamless deployment on [Lovable](https://lovable.dev). Pushing to the connected repository branch automatically builds and deploys the latest changes.
+
+You can also build the project manually:
 
 ```bash
-npm run build
-
-# or
-
 bun run build
 ```
 
-The optimized production files will be generated inside the `dist` directory and can be deployed to any static hosting platform.
+The static production files will be generated in the `dist/` directory.
 
 ---
 
 ## Contact
 
-Feel free to connect with me for collaborations, freelance opportunities, or professional networking.
+Feel free to connect or reach out for collaboration:
 
-- **GitHub:** https://github.com/SalmanKhanPK211
-- **LinkedIn:** https://www.linkedin.com/in/salman-khan-a196773aa
-- **Email:** salmankhan.pk211@gmail.com
-- **WhatsApp:** +92 313 7700673
+- **Portfolio:** [salmankhanportfolio.lovable.app](https://salmankhanportfolio.lovable.app)
+- **GitHub:** [https://github.com/SalmanKhanPK211](https://github.com/SalmanKhanPK211)
+- **LinkedIn:** [https://www.linkedin.com/in/salman-khan-a196773aa](https://www.linkedin.com/in/salman-khan-a196773aa)
+- **Email:** [salmankhan.pk211@gmail.com](mailto:salmankhan.pk211@gmail.com)
+- **WhatsApp:** [+92 313 7700673](https://wa.me/923137700673)
 
 ---
 
 ## License
 
-This project is intended for personal portfolio and demonstration purposes.
+This project is for personal use and demonstration purposes.
 
 © 2026 Salman Khan. All rights reserved.

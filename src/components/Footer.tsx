@@ -1,8 +1,8 @@
 import { Github, Heart, Linkedin, Mail } from "lucide-react";
 
 const footerLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Github, href: "https://github.com/SalmanKhanPK211", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/salman-khan-a196773aa", label: "LinkedIn" },
   { icon: Mail, href: "https://mail.google.com/mail/?view=cm&to=salmankhan.pk211@gmail.com", label: "Email" },
 ];
 

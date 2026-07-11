@@ -14,7 +14,99 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      certificates: {
+        Row: {
+          created_at: string
+          description: string
+          id: string
+          image_url: string
+          sort_order: number
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          description: string
+          id?: string
+          image_url: string
+          sort_order?: number
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          description?: string
+          id?: string
+          image_url?: string
+          sort_order?: number
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      projects: {
+        Row: {
+          brief_description: string
+          created_at: string
+          github_url: string | null
+          id: string
+          image_url: string
+          live_demo_url: string | null
+          other_images: Json
+          project_report_url: string | null
+          short_description: string
+          sort_order: number
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          brief_description: string
+          created_at?: string
+          github_url?: string | null
+          id?: string
+          image_url: string
+          live_demo_url?: string | null
+          other_images?: Json
+          project_report_url?: string | null
+          short_description: string
+          sort_order?: number
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          brief_description?: string
+          created_at?: string
+          github_url?: string | null
+          id?: string
+          image_url?: string
+          live_demo_url?: string | null
+          other_images?: Json
+          project_report_url?: string | null
+          short_description?: string
+          sort_order?: number
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      site_settings: {
+        Row: {
+          key: string
+          updated_at: string
+          value: string | null
+        }
+        Insert: {
+          key: string
+          updated_at?: string
+          value?: string | null
+        }
+        Update: {
+          key?: string
+          updated_at?: string
+          value?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

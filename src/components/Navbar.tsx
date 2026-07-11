@@ -21,12 +21,12 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-card/80 backdrop-blur-lg shadow-card border-b border-border" : "bg-transparent"}`}>
       <div className="container mx-auto flex items-center justify-between py-4">
-        <a href="#home" className="text-xl font-bold gradient-text">Salman Khan</a>
+        <a href="/#home" className="text-xl font-bold gradient-text">Salman Khan</a>
 
         {/* Desktop */}
         <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a key={link} href={`#${link.toLowerCase()}`} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+            <a key={link} href={`/#${link.toLowerCase()}`} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               {link}
             </a>
           ))}
@@ -50,7 +50,7 @@ const Navbar = () => {
         <div className="lg:hidden bg-card/95 backdrop-blur-lg border-t border-border animate-fade-in">
           <div className="container mx-auto py-4 flex flex-col gap-3">
             {navLinks.map((link) => (
-              <a key={link} href={`#${link.toLowerCase()}`} onClick={() => setIsOpen(false)} className="py-2 px-4 rounded-lg text-sm font-medium text-muted-foreground hover:text-primary hover:bg-secondary transition-colors">
+              <a key={link} href={`/#${link.toLowerCase()}`} onClick={() => setIsOpen(false)} className="py-2 px-4 rounded-lg text-sm font-medium text-muted-foreground hover:text-primary hover:bg-secondary transition-colors">
                 {link}
               </a>
             ))}
